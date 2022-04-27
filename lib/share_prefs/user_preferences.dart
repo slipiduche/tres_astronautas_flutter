@@ -9,77 +9,77 @@ class UserPreferences {
 
   UserPreferences._internal();
 
-  SharedPreferences _prefs;
+  SharedPreferences prefs;
 
   initPrefs() async {
-    this._prefs = await SharedPreferences.getInstance();
+    this.prefs = await SharedPreferences.getInstance();
   }
 
   // GET y SET de la última página
   get ultimaPagina {
-    return _prefs.getString('ultimaPagina') ?? 'home';
+    return prefs.getString('ultimaPagina') ?? 'home';
   }
 
   set ultimaPagina(String value) {
-    _prefs.setString('ultimaPagina', value);
+    prefs.setString('ultimaPagina', value);
   }
 
   // GET y SET del token
   //
   //
   String get token {
-    return _prefs.getString('token') ?? '';
+    return prefs.getString('token') ?? '';
   }
 
   get token1 {
-    return _prefs.getString('token1') ?? '';
+    return prefs.getString('token1') ?? '';
   }
 
   get token2 {
-    return _prefs.getString('token2') ?? '';
+    return prefs.getString('token2') ?? '';
   }
 
   get token3 {
-    return _prefs.getString('token3') ?? '';
+    return prefs.getString('token3') ?? '';
   }
 
   set token(String value) {
-    _prefs.setString('token', value);
+    prefs.setString('token', value);
   }
 
   // GET y SET del nombre
   get name {
-    return _prefs.getString('nombre') ?? '';
+    return prefs.getString('nombre') ?? '';
   }
 
   set name(String value) {
-    _prefs.setString('nombre', value);
+    prefs.setString('nombre', value);
   }
 
   // GET y SET del email
   get email {
-    return _prefs.getString('email') ?? '';
+    return prefs.getString('email') ?? '';
   }
 
   set email(String value) {
-    _prefs.setString('email', value);
+    prefs.setString('email', value);
   }
 
   // GET y SET del userType
   get userType {
-    return _prefs.getInt('userType') ?? '';
+    return prefs.getInt('userType') ?? '';
   }
 
   set userType(int value) {
-    _prefs.setInt('userType', value);
+    prefs.setInt('userType', value);
   }
 
   // GET y SET del userId
   get userId {
-    return _prefs.getInt('userId') ?? '';
+    return prefs.getInt('userId') ?? '';
   }
 
   set userId(String value) {
-    _prefs.setString('userId', value);
+    prefs.setString('userId', value);
   }
 }
