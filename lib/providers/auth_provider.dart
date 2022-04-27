@@ -46,8 +46,6 @@ class AuthProvider {
   final _prefs = new UserPreferences();
   Future<Map<String, dynamic>> login(String email, String password) async {
     Map<String, dynamic> decodedResp;
-    String basicAuth = 'Basic ' + base64Encode(utf8.encode('$email:$password'));
-    print(basicAuth);
 
     try {
       final ioc = new HttpClient();
