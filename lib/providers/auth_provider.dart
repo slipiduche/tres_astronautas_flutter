@@ -36,8 +36,6 @@ class AuthProvider {
       _prefs.token = token;
       print(_prefs.token);
       print(token.substring(result - 1, position));
-      // _prefs.userId = int.parse(token.substring(result - 1, position));
-      // print(_prefs.userId);
     }
   }
 
@@ -54,11 +52,7 @@ class AuthProvider {
       final http = new IOClient(ioc);
       await http.post(Uri.parse(Parameters().loginUrl),
           body: {"email": email, "password": password}).then((response) {
-        print("Reponse status : ${response.statusCode}");
-        print("Response body : ${response.body}");
         decodedResp = json.decode(response.body);
-        //String token = decodedResp["token"];
-        print(decodedResp);
       });
 
       if (decodedResp["access_token"] != null) {
