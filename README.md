@@ -11,7 +11,7 @@ This is an integration with [tres-astronautas-api](https://tres-astronautas-back
 
 
 <br />
-    <a href="https://github.com/slipiduche/tres-astronautas-flutter/tree/main/img"><strong>More Images »</strong></a>
+    <a href="https://github.com/slipiduche/tres_astronautas_flutter/tree/master/img"><strong>More Images »</strong></a>
     <br />
 
 <p align="right">(<a href="#top">back to top</a>)</p>
